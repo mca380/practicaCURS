@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-XI0PIujkSZEzZ5m8WTEm+krRuIpfO+vHrEznaIrhTAkbrbIvfs11kzCqUarPR7yn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="JS/document.js"></script>
+    <title>CURS</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CURS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:location.reload()">Refrescar la pàgina<span class="sr-only">(current)</span></a>
+                </li><!--Es refresca la pàgina per a una nova recerca-->
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method=GET action="http://www.google.com/search"><!--cercardor a Google-->
+                <A HREF="http://www.google.com/"></A>
+                <input class="form-control mr-sm-2" type="text" placeholder="Cercador de Google" type="search" name=q size=31 maxlength=255 value=""> <!--Cercador de Google incorporat a la pàgina-->
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="material-icons">cercar</i></button>
+            </form>
+        </div>
+    </nav>
+    <br><br>
+    <div class="container" id="cos">
+        <h1>Insereix les dades del curs</h1>
+        <form   id="formulari"onsubmit="return false">
+            <div class="form-group">
+                <label for="nomCurs">Nom del curs</label>
+                <input type="text" class="form-control" id="nomCurs" required>
+            </div>
+            <div class="form-group">
+                <label for="tipusCurs">Tipus de curs</label>
+                <input type="text" class="form-control" id="tipusCurs" required>
+            </div>
+            <div class="form-group">
+                <label for="nomProfessor">Nom del professor</label>
+                <input type="text" class="form-control" id="nomProfessor" required>
+            </div>
+            <div class="form-group">
+                <label for="dataInici">Data d'inici</label>
+                <input type="date" class="form-control" id="dataInici" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dataFi">Data de fi</label>
+                <input type="date" class="form-control" id="dataFi" required>
+            </div>
+            <div class="form-group">
+                <label for="hores">Hores</label>
+                <input type="number" class="form-control" id="hores" min="0" max="1000" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Mostrar curs</button>
+        </form>
+        <br><br>
+        <div class = "colorTaula">
+        <h1>Resultats</h1>
+        <table id="taula" class="table table-hover"><!--Taula buida on es posen els resultats de la recerca-->
+           <thead>
+                <tr>
+                    <th>Nom del curs</th>
+                    <th>Tipus de curs</th>
+                    <th>Nom del professor</th>
+                    <th>Data inicial</th>
+                    <th>Duració del curs</th>
+                    <th>Hores</th>
+                </tr>
+            </thead>
+            <tbody id= "cosTaula">
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+</html>

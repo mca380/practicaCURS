@@ -4,7 +4,7 @@ $(document).ready(function() {
         var dataFi = new Date($('#dataFi').val()); 
         var veureData = dataInici.getDate() +'/'+(dataInici.getMonth()+1)+'/'+dataInici.getFullYear();
         function calcData(dataInici, dataFi) {//Funció que ens calcula els dies que hi ha entre la data d'inici i la data de fi del curs.
-            return Math.round((dataInici-dataFi)/(1000*60*60*24));
+            return Math.round((dataFi-dataInici)/(1000*60*60*24));
     }
         var dies = calcData(dataInici,dataFi);//El resultat de la funció anterior el guardam dins la variable per a després poder mostrar els dies.
     
